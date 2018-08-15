@@ -1,0 +1,487 @@
+@import 'config';
+@import 'menu';
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+	background-color:black;
+	color: set-text-color($primary-color);
+	margin: 0;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.5;
+	
+
+}
+.contact{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+}
+//Headings
+
+#home>h1,h2,h3{
+    .special-char{
+        color: #1abc9c;
+    }
+	margin:0;
+	font-weight: 400;
+
+	&.lg-heading{
+        margin-top: 0;
+        font-size: 84px;
+        text-align: center;
+        z-index: 33;
+	}
+    &.md-heading{
+        text-align: center;
+        font-size:2.3rem;
+        color: $secondary-color;
+        padding: 0.2rem 1rem;
+        padding-top: 100px;
+        text-shadow:0 0 6px rgba(0, 0, 0, 0.2)
+    }
+	&.sm-heading{
+		margin-bottom: 2rem;
+        padding: 0.2rem 1rem;
+        border-radius: 5px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.4em;
+        padding: 0 10px;
+        font-weight: 100;
+    
+	}
+
+	
+}
+
+a{
+	color: #fff;
+	text-decoration: none;
+
+}
+header{
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+
+}
+
+
+section{
+	padding: 4rem;
+	min-height: calc(100vh-60px);
+
+	.icons{
+        margin-top: 1rem;
+        text-align: center;
+		a{
+			padding: 0.4rem;
+
+			&:hover{
+				color: $secondary-color;
+				@include easeOut();
+			}
+		}
+
+	}
+	&#home{
+		overflow: hidden;
+		h1{
+			margin-top:20vh;
+		}
+	}
+}
+#main-page{
+    height: 700px;
+}
+
+//This is the about page
+
+.about{
+
+    background:#f8f9fa;
+    
+    padding-bottom: 160px;
+
+
+    .bio-image{
+        display: block;
+        margin-left: auto !important;
+        margin-right: auto;
+		border-radius: 50%;
+        border:$secondary-color 3px solid;
+        width: 250px;;
+        height: 250px;
+        
+        // align:center;
+        // margin-left:38%;
+        // margin-bottom: 20px;
+	}
+    
+    .about-heading{
+        text-align: center;
+        color:rgba($primary-color,$background-opacity);
+        font-weight: 500;
+        font-family: "Dosis", arial, tahoma, verdana;
+    }
+    hr{
+        display: block;
+        border-top: 5px solid #1abc9c;
+        width: 80px;
+        margin-left:auto !important;
+        margin-right: auto;
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+    // .underline{
+    //     padding-top: 10px;
+    //     height: 2px;
+    //     background-color:#1abc9c;
+    //     width:80px;
+        
+    // }
+
+    
+
+    .lead{
+        text-align: center;
+        color: rgb(10, 9, 9);
+        font-size:1.25rem;
+        font-weight:300;
+    }
+}
+
+
+//This is the skills section
+.skills{
+    .about-heading{
+        padding-top:20px;
+        text-align: center;
+        color:#fff;
+        font-size:2rem;
+        font-weight: 500;
+        font-family: "Dosis", arial, tahoma, verdana;
+    }
+
+    h3.lead{
+        text-align: center;
+        
+        font-size:1.5rem;
+        font-weight:300;
+    }
+    div.lead{
+        text-align: center;
+        
+        font-size:1.1rem;
+        font-weight:300;
+    }
+    .boxes{
+        text-align: center;
+        padding-top:70px;
+        padding-bottom:70px;
+        display: grid;
+        grid-gap:30px;
+        grid-template-areas: 
+        'box1 box2 box3'
+        ;
+        grid-template-columns: repeat(3,1fr);
+
+        .box-1{
+            
+            height: auto;
+            grid-area: box1;
+        }
+        .box-2{
+            
+            height: auto;
+            grid-area: box2;
+        }
+        .box-3{
+            
+            height: auto;
+            grid-area: box3;
+        }
+    }
+    
+        hr{
+            display: block;
+            border-top: 5px solid #1abc9c;
+            width: 80px;
+            margin-left:auto !important;
+            margin-right: auto;
+            margin-top:10px;
+            margin-bottom:10px;
+        }
+    
+}
+
+#skills-section{
+	background:url(../img/pexels-photo-14676.png) no-repeat;
+	background-size:cover;
+    background-attachment: fixed;
+    
+}
+.dark-overlay{
+    background-color:rgba(0,0,0,0.7);
+
+}
+
+
+
+@media (max-height:700px){
+    .menu-btn{
+        background: black;
+    }
+}
+@media (max-height:2186px){
+    .menu-btn{
+        background: black;
+    }
+}
+
+
+
+
+//This is the my work section
+#mywork-section{
+    background: #f9f9f9;
+    color: #333333;
+    
+
+    .about-heading{
+        padding-top:30px;
+        font-weight:400;
+        text-align: center;
+    }
+    .lead{
+        text-align: center;
+    }
+
+    hr{
+        display: block;
+        border-top: 5px solid #1abc9c;
+        width: 80px;
+        margin-left:auto !important;
+        margin-right: auto;
+        margin-top:10px;
+        margin-bottom:10px;
+    }
+
+        .text-secondary{
+            color:$secondary-color;
+        }
+        
+        }
+        .rectangles{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 1rem;
+
+            div{
+                font-size: 1.6rem;
+                border:3px $secondary-color solid;
+                padding: 1.5rem 2.5rem;
+                margin-bottom: 2.55rem;
+                @include easeOut;
+                
+                span:hover{
+                    color:black;
+                }
+                &:hover{
+                    padding: 0.5rem 1.5rem;
+                    background:$secondary-color;
+                    color:set-text-color($secondary-color);
+                    
+                }
+            }
+        
+        //Btn styles
+        .btn{
+            display: block;
+            padding: 0.5rem 1rem;
+            border:0;
+            margin-bottom: 0.3rem;
+        
+            &:hover{
+                background-color: $secondary-color;
+                color:set-text-color($secondary-color);
+                @include easeOut;
+            }
+        }
+    
+    
+}
+
+
+
+
+
+
+//This is the footer section
+.footer{
+    padding: 2rem 2rem;
+    text-align: center;
+    
+
+    .footer-header{
+        font-size:1.25rem;
+    }
+    .btn-contact{
+        margin-top:10px;
+        padding: 0.7rem 1.2rem;
+        border:0;
+        margin-bottom: 0.3rem;
+        @include easeOut;
+        border-radius:4px;
+        box-shadow: 0 0 2px grey;
+        color:black !important;
+    }
+    .btn-contact:hover{
+        border-color:#6c757d;
+        background-color:$secondary-color;
+        color:black;
+        @include easeOut;
+        box-shadow: 0 0 6px grey;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+	width: 100%;
+	padding-right: 320px;
+	padding-left: 320px;
+	margin-right: auto;
+	margin-left: auto;
+  }
+  
+  @media (min-width: 576px) {
+	.container {
+	  max-width: 540px;
+	}
+  }
+  
+  @media (min-width: 768px) {
+	.container {
+	  max-width: 720px;
+	}
+  }
+  
+  @media (min-width: 992px) {
+	.container {
+	  max-width: 960px;
+	}
+  }
+  
+  @media (min-width: 1200px) {
+	.container {
+	  max-width: 1140px;
+	}
+  }
+
+
+  @import 'mobile';

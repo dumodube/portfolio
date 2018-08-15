@@ -1,0 +1,150 @@
+//Widescreens
+@include mediaXL{
+    .projects{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+//Desktops and Laptops
+
+@include mediaLg{
+    .projects{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .container{
+        padding-right: 60px;
+	    padding-left: 60px;
+    }
+
+}
+
+//Tablets and Small laptops
+
+@include mediaMd{
+    #home{
+        align-items:center;
+        text-align:center;
+
+        .lg-heading{
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+    }
+
+    ul.menu-nav,
+    div.menu-branding{
+        float: none;
+        width:100%;
+        min-height:0;
+
+        &.show{
+            transform: translated3d(0,0,0);
+        }
+    }
+
+    .menu-nav{
+        height: 75vh;
+        transform: translate3d(-100%,0,0);
+        font-size:24px;
+    }
+
+    .menu-branding{
+        height:25vh;
+        transform: translate3d(100%,0,0);
+
+        .portrait{
+            background: url('../img/portrait-mini.jpg');
+            width: 150px;
+            height: 150px;
+        }
+        
+        
+    }
+    .skills{
+        .boxes{
+            grid-template-areas: 
+            'box1'
+            'box2'
+            'box3'
+            ;
+    
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    .container{
+        padding-right: 40px;
+	    padding-left: 40px;
+    }
+    .projects{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .bio-image{
+        margin-left:28% !important;
+    }
+}
+// @include mediaMd-2{
+//     .bio-image{
+//         margin-left:33% !important;
+//     }
+//     .container{
+//         padding-right: 25px;
+// 	    padding-left: 25px;
+//     }
+// }
+//Smartphones
+@include mediaSm{
+    main#home h1{
+        margin-top:10vh;
+    }
+
+    .projects{
+        grid-template-columns: 1fr;
+    }
+
+    #main-page{
+        margin-bottom: 30px;
+    }
+
+    .sm-heading{
+        display: none;
+    }
+
+    .container{
+        padding-right: 16px;
+	    padding-left: 16px;
+    }
+    .bio-image{
+        margin-left:15%;
+    }
+
+    ul.menu-nav,
+    div.menu-branding{
+        float: none;
+        width:100%;
+        min-height:0;
+
+        &.show{
+            transform: translated3d(0,0,0);
+        }
+    }
+
+    .menu-nav{
+        height: 75vh;
+        transform: translate3d(-100%,0,0);
+        font-size:24px;
+    }
+
+    .menu-branding{
+        height:25vh;
+        transform: translate3d(100%,0,0);
+
+        .portrait{
+            background: url('../img/portrait-mini.jpg');
+            width: 150px;
+            height: 150px;
+        }
+        
+        
+    }
+}
